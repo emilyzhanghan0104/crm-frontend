@@ -1,8 +1,7 @@
-import './entry.styles.css';
-
 import React, { useState } from 'react';
 import { Jumbotron } from 'react-bootstrap';
 
+import './entry.styles.css';
 import LoginForm from '../../components/login/login.comp';
 import Reset from '../../components/password-reset/resetPassword';
 
