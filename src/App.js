@@ -1,15 +1,15 @@
 import React from 'react';
 
 import './App.css';
-import Entry from './pages/entry/Entry.page';
-import Dashboard from './pages/dashboard/Dashboard.comp';
+import { Dashboard, AddTicket } from './pages';
 import DefaultLayout from './layout/DefaultLayout';
 
 function App() {
   return (
     <div>
       <DefaultLayout>
-        <Dashboard />
+        {/*  <Dashboard /> */}
+        <AddTicket />
       </DefaultLayout>
     </div>
   );
