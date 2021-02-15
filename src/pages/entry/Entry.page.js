@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { Jumbotron } from 'react-bootstrap';
 
 import './entry.styles.css';
-import LoginForm from '../../components/login/login.comp';
-import Reset from '../../components/password-reset/resetPassword';
+import { LoginForm, Reset } from '../../components';
 
 const Entry = () => {
   const [email, setEmail] = useState('');
