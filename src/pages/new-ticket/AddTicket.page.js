@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 
 import { PageBreadcrumb, AddTicketForm } from '../../components';
@@ -11,7 +11,7 @@ const initFrmDt = {
 
 const AddTicket = () => {
   const [frmData, setFrmData] = useState(initFrmDt);
-
+  useEffect(() => {}, [frmData]);
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setFrmData({
