@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './App.css';
-import { Dashboard, AddTicket, TicketLists } from './pages';
+import { Dashboard, AddTicket, TicketLists, Ticket } from './pages';
 import DefaultLayout from './layout/DefaultLayout';
 
 function App() {
@@ -10,7 +10,8 @@ function App() {
       <DefaultLayout>
         {/*  <Dashboard /> */}
         {/* <AddTicket /> */}
-        <TicketLists />
+        {/* <TicketLists /> */}
+        <Ticket />
       </DefaultLayout>
     </div>
   );
