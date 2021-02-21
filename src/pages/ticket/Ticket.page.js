@@ -1,13 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Container, Row, Col } from 'react-bootstrap';
+import { useParams } from 'react-router-dom';
 
 import tickets from '../../assets/data/dummy-tickets.json';
 import { PageBreadcrumb, MessageHistory, UpdateTicket } from '../../components';
 
-const ticket = tickets[0];
 const Ticket = () => {
   const [msg, setMsg] = useState('');
-  useEffect(() => {}, [msg]);
+  const [ticket, setTicket] = useState('');
+  const { tId } = useParams();
+
+  useEffect(() => {
+    const foundTicket = tickets.find(({ id }) => parseInt(tId) === id);
+
+    setTicket(foundTicket);
+  }, [msg, tId]);
 
   const handleOnSubmit = () => {
     alert('form has been submitted');
@@ -36,9 +43,7 @@ const Ticket = () => {
         </Col>
       </Row>
       <Row className="mt-4">
-        <Col>
-          <MessageHistory msg={ticket.history} />
-        </Col>
+        <Col>{ticket.history && <MessageHistory msg={ticket.history} />}</Col>
       </Row>
       <Row className="mt-4">
         <Col>
